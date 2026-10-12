@@ -1,7 +1,7 @@
 /** C implementation for 
     Red-Black Tree Insertion
     This code is provided by 
-    costheta_z **/
+    costheta_z thank you **/
 #include <stdio.h>
 #include <stdlib.h>
 
