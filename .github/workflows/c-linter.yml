@@ -1,0 +1,23 @@
+name: cpp-linter
+on: pull_request
+
+jobs:
+  cpp-linter:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: cpp-linter/cpp-linter-action@v2
+        id: linter
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          version: '21'
+          style: file
+          tidy-checks: ''
+          format-review: true
+      - name: Fail on lint errors
+        if: steps.linter.outputs.checks-failed > 0
+        run: exit 1
