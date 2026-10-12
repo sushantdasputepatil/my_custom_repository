@@ -1,4 +1,4 @@
-/** C implementation for 
+/** C implementation for
     Red-Black Tree Insertion
     This code is provided by
     costheta_z thank you **/
