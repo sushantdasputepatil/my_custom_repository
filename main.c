@@ -88,8 +88,10 @@ void fixup(struct node* root, struct node* pt)
     struct node* parent_pt = NULL;
     struct node* grand_parent_pt = NULL;
 
-    while ((pt != root) && (pt->c != 0)
-           && (pt->p->c == 1)) 
+    while ((pt != root) &&
+       (pt->p != NULL) &&
+       (pt->c != 0) &&
+       (pt->p->c == 1))
     {
         parent_pt = pt->p;
         grand_parent_pt = pt->p->p;
