@@ -2,6 +2,6 @@
 int main()
 {
     int n = 7;
-    printf("%d\n",n);
+    printf("Value of n is %d \n",n);
     return 0;
 }
